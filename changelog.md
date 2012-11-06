@@ -1,3 +1,8 @@
+## 2.0.6 [06 November 2012]
+* Added I18n support to the models with Globalize3 [luis-mendo](https://github.com/luis-mendo)
+* Added a calendar helper based on @topfunky's [calendar helper](https://github.com/topfunky/calendar_helper) for displaying events in a mini-calendar [brenes](https://github.com/brenes)
+* Some brand new scopes [brenes](https://github.com/brenes)
+
 ## 2.0.2 [21 June 2012]
 * Fix bug; add vendor path to gemspec for assets to be packaged up
 

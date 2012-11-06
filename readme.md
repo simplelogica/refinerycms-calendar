@@ -1,12 +1,15 @@
 # Calendar extension for Refinery CMS.
 
-[![Build Status](https://secure.travis-ci.org/resolve/refinerycms-calendar.png?branch=master)](http://travis-ci.org/resolve/refinerycms-calendar)
+This is a calendar gem for refinery forked from (https://github.com/refinery/refinerycms-calendar) with some additional features such as:
+
+  * I18n support in models using Globalize3
+  * A calendar helper based on @topfunky's [calendar helper](https://github.com/topfunky/calendar_helper)
 
 ## Installation
 
 ```ruby
 # in Gemfile:
-gem 'refinerycms-calendar', '~>2.0.0'
+gem 'refinerycms-sl-calendar', '2.0.6'
 ```
 
 ```
