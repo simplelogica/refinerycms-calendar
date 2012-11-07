@@ -17,12 +17,24 @@ module Refinery
 
       attr_accessor :locale
 
+      alias_attribute :from, :starts_at
+      alias_attribute :to, :ends_at
+
       delegate :name, :address,
                 :to => :venue,
                 :prefix => true,
                 :allow_nil => true
 
-      scope :on_day, lambda {|day| where('(refinery_calendar_events.`from` = ?) OR (refinery_calendar_events.`to` = ?) OR (refinery_calendar_events.`from` < ? AND (refinery_calendar_events.`to` > ?))', day, day, day, day) }
+      scope :starting_on_day, lambda {|day| where(starts_at: day.beginning_of_day..day.tomorrow.beginning_of_day) }
+      scope :ending_on_day, lambda {|day| where(ends_at: day.beginning_of_day..day.tomorrow.beginning_of_day) }
+
+      scope :on_day, lambda {|day|
+        where(
+          arel_table[:starts_at].in(day.beginning_of_day..day.tomorrow.beginning_of_day).
+          or(arel_table[:ends_at].in(day.beginning_of_day..day.tomorrow.beginning_of_day)).
+          or( arel_table[:starts_at].lt(day.beginning_of_day).and(arel_table[:ends_at].gt(day.tomorrow.beginning_of_day)) )
+        )
+      }
 
       class Translation
         attr_accessible :locale
@@ -30,7 +42,7 @@ module Refinery
 
       class << self
         def upcoming
-          where('refinery_calendar_events.from >= ?', Time.now).with_globalize
+          where('refinery_calendar_events.starts_at >= ?', Time.now).with_globalize
         end
 
         def featured
@@ -38,7 +50,7 @@ module Refinery
         end
 
         def archive
-          where('refinery_calendar_events.from < ?', Time.now).with_globalize
+          where('refinery_calendar_events.starts_at < ?', Time.now).with_globalize
         end
 
         # Wrap up the logic of finding the events based on the translations table.
