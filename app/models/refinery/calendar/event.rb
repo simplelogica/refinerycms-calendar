@@ -25,7 +25,10 @@ module Refinery
                 :prefix => true,
                 :allow_nil => true
 
-      scope :on_day, lambda {|day| where('(refinery_calendar_events.starts_at = ?) OR (refinery_calendar_events.ends_at = ?) OR (refinery_calendar_events.starts_at < ? AND (refinery_calendar_events.ends_at > ?))', day, day, day, day) }
+      scope :on_day, lambda {|day| where('
+        ( (refinery_calendar_events.starts_at >= ?) AND (refinery_calendar_events.starts_at < ?))
+        OR ((refinery_calendar_events.ends_at >= ?) AND (refinery_calendar_events.ends_at < ?))
+        OR (refinery_calendar_events.starts_at < ? AND (refinery_calendar_events.ends_at > ?))', day, day + 1.day, day, day + 1.day, day, day) }
 
       class Translation
         attr_accessible :locale
