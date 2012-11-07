@@ -1,3 +1,7 @@
+## 2.0.6.3 [07 November 2012]
+* Fixed issue #3 about a migration [brenes](https://github.com/brenes)
+* Fixed issue #4 about calendar form and js [brenes](https://github.com/brenes)
+
 ## 2.0.6.2 [07 November 2012]
 * Changed 'from' and 'to' attributes to 'starts_at' and 'ends_at' fixing issue #25 from refinery repo [brenes](https://github.com/brenes)
 * Changed 'starts_at' and 'ends_at' to datetime [brenes](https://github.com/brenes)

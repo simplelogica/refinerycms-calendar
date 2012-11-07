@@ -11,7 +11,7 @@ This is a calendar gem for refinery forked from (https://github.com/refinery/ref
 
 ```ruby
 # in Gemfile:
-gem 'refinerycms-sl-calendar', '~> 2.0.6.2'
+gem 'refinerycms-sl-calendar', '~> 2.0.6.3'
 ```
 
 ```
