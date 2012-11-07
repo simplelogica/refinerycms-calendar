@@ -1,3 +1,9 @@
+## 2.0.6.2 [07 November 2012]
+* Changed 'from' and 'to' attributes to 'starts_at' and 'ends_at' fixing issue #25 from refinery repo [brenes](https://github.com/brenes)
+* Changed 'starts_at' and 'ends_at' to datetime [brenes](https://github.com/brenes)
+* Removed deprecated content_for :body_content_left at events#index [brenes](https://github.com/brenes)
+* Integrated with Travis [brenes](https://github.com/brenes)
+
 ## 2.0.6 [06 November 2012]
 * Added I18n support to the models with Globalize3 [luis-mendo](https://github.com/luis-mendo)
 * Added a calendar helper based on @topfunky's [calendar helper](https://github.com/topfunky/calendar_helper) for displaying events in a mini-calendar [brenes](https://github.com/brenes)
