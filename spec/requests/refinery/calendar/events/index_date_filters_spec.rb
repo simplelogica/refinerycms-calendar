@@ -7,8 +7,8 @@ describe "Date filters on index" do
 
 
   before :each do
-    Factory.create :event, title: "tomorrow event", from: Date.tomorrow
-    Factory.create :event, title: "future event", from: 10.days.from_now
+    Factory.create :event, title: "tomorrow event", starts_at: Date.tomorrow.beginning_of_day
+    Factory.create :event, title: "future event", starts_at: 10.days.from_now.beginning_of_day
   end
 
   context "when accessing the event index" do

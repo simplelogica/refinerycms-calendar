@@ -9,7 +9,7 @@ describe "Regarding the mini calendar helper" do
   context "when accessing the event index" do
 
     before :each do
-      Factory.create :event, :from => Date.today
+      Factory.create :event, :starts_at => Date.today.beginning_of_day
       visit refinery.calendar_events_path
     end
 
