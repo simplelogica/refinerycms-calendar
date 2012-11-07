@@ -1,5 +1,7 @@
 # Calendar extension for Refinery CMS.
 
+[![Build Status](https://secure.travis-ci.org/simplelogica/refinerycms-calendar.png)](http://travis-ci.org/simplelogica/refinerycms-calendar)
+
 This is a calendar gem for refinery forked from (https://github.com/refinery/refinerycms-calendar) with some additional features such as:
 
   * I18n support in models using Globalize3
