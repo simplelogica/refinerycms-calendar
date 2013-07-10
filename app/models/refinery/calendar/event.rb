@@ -9,7 +9,7 @@ module Refinery
 
       belongs_to :venue
 
-      validates :title, :presence => true, :uniqueness => true
+      validates :title, :presence => true
 
       attr_accessible :title, :from, :to, :registration_link,
                       :venue_id, :excerpt, :description,
