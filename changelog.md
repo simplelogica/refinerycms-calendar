@@ -1,3 +1,6 @@
+## 2.0.6.4 [07 November 2012]
+* Removed uniqueness restriction on event title [zapic0](https://github.com/zapic0)
+
 ## 2.0.6.3 [07 November 2012]
 * Fixed issue #3 about a migration [brenes](https://github.com/brenes)
 * Fixed issue #4 about calendar form and js [brenes](https://github.com/brenes)

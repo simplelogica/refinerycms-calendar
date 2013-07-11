@@ -3,8 +3,8 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-sl-calendar'
-  s.version           = '2.0.6.3'
-  s.authors           = ['David J. Brenes', ' Luis Eduardo Rodríguez Mendo', 'Philip Arndt', 'Joe Sak']
+  s.version           = '2.0.6.4'
+  s.authors           = ['Fernando Fernández Zapico', 'David J. Brenes', ' Luis Eduardo Rodríguez Mendo', 'Philip Arndt', 'Joe Sak']
   s.description       = 'Ruby on Rails Calendar extension for Refinery CMS'
   s.email             = 'david.brenes@simplelogica.net'
   s.date              = '2012-11-06'
