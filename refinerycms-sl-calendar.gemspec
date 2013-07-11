@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors           = ['Fernando Fernández Zapico', 'David J. Brenes', ' Luis Eduardo Rodríguez Mendo', 'Philip Arndt', 'Joe Sak']
   s.description       = 'Ruby on Rails Calendar extension for Refinery CMS'
   s.email             = 'david.brenes@simplelogica.net'
-  s.date              = '2012-11-06'
+  s.date              = '2013-07-11'
   s.summary           = 'Calendar extension for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib,vendor}/**/*"] + ["readme.md"]
