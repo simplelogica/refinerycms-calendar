@@ -1,4 +1,4 @@
-## 2.0.6.4 [07 November 2012]
+## 2.0.6.4 [11 July 2013]
 * Removed uniqueness restriction on event title [zapic0](https://github.com/zapic0)
 
 ## 2.0.6.3 [07 November 2012]
