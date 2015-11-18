@@ -1,16 +1,21 @@
 class CreateCalendarEventsTranslations < ActiveRecord::Migration
-  def up
-    Refinery::Calendar::Event.create_translation_table!({
-      :title => :string,
-      :excerpt => :string,
-      :description => :text,
-      :slug => :string
-    }, {
-      :migrate_data => true
-    })
-  end
+  def change
+    translation_table = if defined? Refinery::Calendar::Event::Translation
+      Refinery::Calendar::Event::Translation.table_name
+    else
+      "refinery_calendar_event_translations"
+    end
 
-  def down
-    Refinery::Calendar::Event.drop_translation_table! :migrate_data => true
+    create_table translation_table do |t|
+      t.belongs_to Refinery::Calendar::Event.table_name.singularize
+      t.string :locale
+      t.string :title
+      t.string :excerpt
+      t.string :description
+      t.string :slug
+      t.timestamps
+    end
+
+    add_index translation_table, :locale
   end
 end
